@@ -13,6 +13,18 @@ This application enables users to create and edit existing Confluence pages.
 | POST        | `/editExisting`        | Edits an existing page in Confluence using the provided `ConfluenceModel`. |
 
 
+The payload ConfluenceModel will contain the following
+
+| Field      | Data Type                      | Description                                             |
+|------------|--------------------------------|---------------------------------------------------------|
+| `title`    | `String`                       | The title of the Confluence page.                       |
+| `content`  | `ArrayList<ArrayList<String>>` | The content of the page, represented as a list of lists of strings. Each inner list can represent a paragraph or section. |
+| `pageId`   | `String`                       | The unique identifier of the page to be edited (optional). |
+| `spaceKey` | `String`                       | The key of the Confluence space where the page will be created or edited. |
+
+
+
+
 ---
 
 ## Accessing the Confluence Publisher
