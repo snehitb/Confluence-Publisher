@@ -1,22 +1,23 @@
-This backend API service provides endpoints to add a page in Confluence Space as well as edit an existing page
+# Confluence Publisher
+
+This application enables users to create and edit existing Confluence pages.
+
+---
 
 
+## API Endpoints
 
-Steps to follow while deployment 
+| HTTP Method | Endpoint               | Description                                   |
+|-------------|------------------------|-----------------------------------------------|
+| POST        | `/publishCustom`       | Publishes a new page in Confluence using the provided `ConfluenceModel`. |
+| POST        | `/editExisting`        | Edits an existing page in Confluence using the provided `ConfluenceModel`. |
 
-->Clone the repo
 
-->Configure your Confluence tokens while deployment
+---
 
-->From the root of the repo , run the docker file with commands
+## Accessing the Confluence Publisher
 
-   -> docker build -t confluence-app .
-   
-   -> docker run -d -p 8080:8080 --name container125 confluence-app
-   
-->Once the container is running , Postman can be used to perform the operations
-
-Creating a new page in confluence space
+### Sign-Up
 
 Supply necessary details like page title , page content, space key as well as pageId(optional)
 
@@ -24,7 +25,30 @@ Supply necessary details like page title , page content, space key as well as pa
 ![image](https://github.com/user-attachments/assets/74a0bda2-9c0a-43f9-8deb-ec7bdf4689f9) 
 
 
-link https://snehitbatra.atlassian.net/wiki/spaces/MFS/pages/4882434/testing+from+local
+The page created : https://snehitbatra.atlassian.net/wiki/spaces/MFS/pages/4882434/testing+from+local
+
+
+---
+
+## Technologies Used
+- **Spring Boot**
+- **Docker**
+
+---
+
+## Running the Application
+
+For easier deployment make sure to have docker installed. 
+A docker image has been provided.
+
+To run this application, follow the steps below:
+1. Clone the repository.
+2. Run these commands
+# Build the Docker image
+docker build -t confluence-app .
+
+# Run the Docker container
+docker run -d -p 8080:8080 --name container_name confluence-app
 
 
 
