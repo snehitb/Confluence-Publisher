@@ -44,10 +44,13 @@ A docker image has been provided.
 To run this application, follow the steps below:
 1. Clone the repository.
 2. Run these commands
-# Build the Docker image
-docker build -t confluence-app .
 
-# Run the Docker container
+ ### Build the Docker image
+
+ docker build -t confluence-app .
+
+ ### Run the Docker container
+ 
 docker run -d -p 8080:8080 --name container_name confluence-app
 
 
